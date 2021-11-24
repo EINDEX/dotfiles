@@ -49,10 +49,7 @@ export LC_ALL="en_US.UTF-8"
 ## Alias
 alias aria="aria2c -s 16 -x 16"
 alias ls="ls -G"
-alias yadma='yadm list | awk '\''{system("yadm add "$1)}'\'''
-alias yadmc='yadm commit'
-alias yadmb='yadm bootstrap'
-alias yadms='yadm status'
+alias cz='chezmoi'
 
 ## Key Binding
 ### Support up/down line for search
@@ -70,8 +67,7 @@ if [ `uname` = "Darwin" ]; then
         brew list --casks -1 | grep -F -f ~/.brew_livecheck_watchlist | sort | uniq | awk '{print "Start upgrade "$1 ;system("brew upgrade --greedy "$1)}'
     }
 
-    ## vs code fast open
-    alias code="open -a /Applications/Visual\ Studio\ Code.app"
+    export EDITOR="code -w"
 
     ## DNS Clean up
     alias dnsclean="sudo killall -HUP mDNSResponder; sleep 2; echo DNS Cache Reset"
