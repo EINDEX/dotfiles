@@ -1,0 +1,109 @@
+# Inserts a blank line between shell prompts
+# add_newline = true
+format = """
+$username@$hostname\
+$all\
+"""
+right_format = """
+$cmd_duration\
+$memory_usage\
+$battery\
+
+"""
+
+
+[cmd_duration]
+min_time = 1_00
+min_time_to_notify = 60_000
+show_notifications = true
+show_milliseconds = true
+format = '[$duration]($style) '
+
+[character]
+error_symbol = "[✖](bold red)"
+
+[battery]
+charging_symbol = "⚡️ "
+format = "[$percentage $symbol]($style) "
+
+[[battery.display]] 
+threshold = 20
+style = "bold red"
+
+[[battery.display]]
+threshold = 40
+style = "bold yellow"
+discharging_symbol = "💦"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = "../"
+
+[docker_context]
+format="[$symbol$context]($style) "
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+always_show_remote = true
+
+[git_state]
+format = '[\($state( $progress_current of $progress_total)\)]($style) '
+cherry_pick = "[🍒 PICKING](bold red)"
+
+[git_metrics]
+disabled = false
+
+[golang]
+version_format = "${major}.${minor}"
+format = "[$symbol$version](bold cyan) "
+
+
+[hostname]
+ssh_only=false
+format="[$hostname]($style) "
+
+[java]
+version_format="v${major}.${minor}"
+
+[kubernetes]
+disabled = false
+
+[memory_usage]
+disabled = false
+threshold = 75
+format = "$symbol[${ram_pct}( ${swap})]($style) "
+
+[nodejs]
+version_format = "${major}"
+format = "[$symbol$version]($style) "
+
+[package]
+format="[$symbol$version]($style) "
+
+[python]
+format="[${symbol}${pyenv_prefix}(${version} )(($virtualenv) )]($style)"
+
+
+[ruby]
+detect_variables = []
+
+[shell]
+disabled = true
+style = "cyan"
+
+[shlvl]
+disabled = false
+threshold = 1
+
+[time]
+disabled = false
+format = "[$time]($style) "
+time_format="%T"
+# time_format="%m-%d %H:%M"
+
+[username]
+show_always = true
+format = "[$user]($style)"
+style_user = "yellow"
+style_root = "red bold"

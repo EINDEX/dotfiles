@@ -1,0 +1,129 @@
+tap "homebrew/bundle"
+tap "homebrew/cask", "https://github.com/Homebrew/homebrew-cask.git"
+tap "homebrew/cask-drivers", "https://github.com/Homebrew/homebrew-cask-drivers.git"
+tap "homebrew/cask-fonts", "https://github.com/Homebrew/homebrew-cask-fonts.git"
+tap "homebrew/cask-versions", "https://github.com/Homebrew/homebrew-cask-versions.git"
+tap "homebrew/core", "https://github.com/Homebrew/homebrew-core.git"
+tap "homebrew/services"
+
+
+# infra
+brew "k3d"
+
+# doc & blog
+brew "hugo"
+
+# secret
+brew "gnupg"
+brew "bitwarden-cli"
+mas "Bitwarden", id: 1352778147
+
+# git & github
+brew "git"
+brew "pre-commit"
+brew "gh"
+
+# tools
+brew "tmux"
+brew "thefuck"
+cask "maczip"
+brew "jq"
+brew "yadm"
+cask "balenaetcher"
+mas "白描", id: 1249901692
+mas "Mate Translate", id: 1005088137
+
+# system tooling
+brew "mas"
+brew "neofetch"
+cask "appcleaner"
+mas "Xnip", id: 1221250572
+mas "PopClip", id: 445189367
+mas "Hidden Bar", id: 1452453066
+mas "Magnet", id: 441258766
+
+# mointor
+brew "htop"
+cask "istat-menus"
+
+# pentest
+brew "sqlmap"
+brew "aircrack-ng"
+brew "hashcat"
+brew "hping"
+brew "nmap"
+brew "john-jumbo"
+
+# golang
+brew "go"
+
+# node
+brew "n"
+
+# network
+brew "wget"
+brew "aria2"
+brew "ipcalc"
+cask "wireshark"
+cask "paw"
+
+# proxy
+brew "v2ray", greedy: true
+cask "clashx", greedy: true
+
+# java
+brew "gradle"
+brew "maven"
+
+# media
+cask "iina"
+mas "Emby", id: 992180193
+mas "QQ音乐", id: 595615424
+
+# terminal
+cask "iterm2"
+
+# browser
+cask "microsoft-edge"
+cask "google-chrome"
+
+# news
+cask "netnewswire"
+
+# gaming
+cask "steam"
+
+# synology
+cask "synology-drive", greedy: true
+
+# chat & meeting
+cask "telegram", greedy: true
+cask "zoom"
+mas "微信", id: 836500024
+mas "企业微信", id: 1189898970
+mas "QQ", id: 451108668
+
+# coding
+cask "visual-studio-code"
+cask "intellij-idea"
+mas "SnippetsLab", id: 1006087419
+
+# device support
+cask "logitech-options"
+
+# note
+cask "logseq", greedy: true
+cask "zotero"
+mas "GoodNotes", id: 1444383602
+mas "MWeb Pro", id: 1403919533
+
+# font
+cask "font-cascadia"
+
+# cloud
+cask "google-cloud-sdk"
+
+# work
+mas "Keynote 讲演", id: 409183694
+mas "Numbers 表格", id: 409203825
+mas "Pages 文稿", id: 409201541
