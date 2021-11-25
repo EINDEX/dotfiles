@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: dot_Brewfile.tmpl
+  checksum: 7cb772cdafba2f8c4f2d8bd62f6ec900e2ea8ad7e964b9d28112f3dab97a91cf
+version: ""
