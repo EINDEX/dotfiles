@@ -11,6 +11,8 @@ $battery\
 
 """
 
+[aws]
+format = "[$symbol($profile)(\\($region\\) )(\\[$duration\\])]($style)"
 
 [cmd_duration]
 min_time = 1_00
@@ -42,6 +44,9 @@ truncation_symbol = "../"
 
 [docker_context]
 format="[$symbol$context]($style) "
+
+[gcloud]
+format = '[$symbol$account(\($project\))]($style) '
 
 [git_branch]
 format = "[$symbol$branch]($style) "
@@ -94,7 +99,7 @@ style = "cyan"
 
 [shlvl]
 disabled = false
-threshold = 1
+threshold = 2
 
 [time]
 disabled = false
