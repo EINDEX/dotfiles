@@ -92,9 +92,6 @@ cask "google-chrome"
 # news
 cask "netnewswire"
 
-# gaming
-cask "steam"
-
 # synology
 cask "synology-drive", greedy: true
 
@@ -102,7 +99,6 @@ cask "synology-drive", greedy: true
 cask "telegram", greedy: true
 cask "zoom"
 mas "微信", id: 836500024
-mas "企业微信", id: 1189898970
 mas "QQ", id: 451108668
 
 # coding
@@ -131,3 +127,13 @@ mas "Keynote 讲演", id: 409183694
 mas "Numbers 表格", id: 409203825
 mas "Pages 文稿", id: 409201541
 
+{{ if .personal }}
+# gaming
+cask "steam"
+
+{{ else }}
+
+# chat
+mas "企业微信", id: 1189898970
+
+{{ end }}
