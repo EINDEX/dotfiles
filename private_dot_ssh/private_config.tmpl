@@ -1,0 +1,21 @@
+# Read more about SSH config files: https://linux.die.net/man/5/ssh_config
+
+ControlMaster auto
+ServerAliveInterval 30
+ControlPath ~/.ssh/connection-%r@%h:%p
+ControlPersist 4h
+
+Host qcloud
+    HostName {{ .server.qcloud.host }}
+    User {{ .server.qcloud.user }}
+    Port {{ .server.qcloud.port }}
+
+Host yttl
+    HostName {{ .server.yttl.host }}
+    User {{ .server.yttl.user }}
+    Port {{ .server.yttl.port }}
+
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519
