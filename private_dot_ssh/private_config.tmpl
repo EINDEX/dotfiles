@@ -5,17 +5,15 @@ ServerAliveInterval 30
 ControlPath ~/.ssh/connection-%r@%h:%p
 ControlPersist 4h
 
-Host qcloud
-    HostName {{ .server.qcloud.host }}
-    User {{ .server.qcloud.user }}
-    Port {{ .server.qcloud.port }}
-
-Host yttl
-    HostName {{ .server.yttl.host }}
-    User {{ .server.yttl.user }}
-    Port {{ .server.yttl.port }}
+{{ if .server }}{{ range $key, $value := .server }}
+Host {{ $key }}
+    HostName {{ $value.host }}
+    User {{ $value.user }}
+    Port {{ $value.port }}
+{{ end }}{{ end }}
 
 Host *
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_ed25519
+

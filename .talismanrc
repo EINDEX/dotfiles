@@ -1,4 +1,4 @@
 fileignoreconfig:
-- filename: dot_Brewfile.tmpl
-  checksum: 7cb772cdafba2f8c4f2d8bd62f6ec900e2ea8ad7e964b9d28112f3dab97a91cf
+- filename: private_dot_ssh/private_config.tmpl
+  checksum: bad09bf6cd46425e1cbccb075629c96edfd6f76a91fec42c34023761ecf32fc0
 version: ""
