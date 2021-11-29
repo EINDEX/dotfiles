@@ -111,9 +111,17 @@ if [ `uname` = "Darwin" ]; then
     source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
 fi
 
-## Chezomi
+## Chezmoi
 alias cz='chezmoi'
-zinit creinstall ~/.config/chezmoi
+source ~/.config/chezmoi/completion.zsh
+
+## Bitwarden
+# bw unlock and set new session to local file
+bwunlock() {
+    new_session=$(bw unlock | grep export | awk -F 'BW_SESSION=' '{printf $2}' | sed 's/"//g')
+    sed -i.bu 's|'"$BW_SESSION"'|'"$new_session"'|g' .zshenv
+    export BW_SESSION=$BW_SESSION_NEW
+}
 
 ## ZSH theme
 ### Load starship theme via zinit
