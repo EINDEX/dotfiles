@@ -22,13 +22,17 @@ mas "Bitwarden", id: 1352778147
 brew "git"
 brew "pre-commit"
 brew "gh"
+brew "talisman"
+brew "git-crypt"
 
 # tools
 brew "tmux"
 brew "thefuck"
 cask "maczip"
+brew "ncdu"
 brew "jq"
 brew "chezmoi"
+brew "coreutils"
 cask "balenaetcher"
 mas "白描", id: 1249901692
 mas "Mate Translate", id: 1005088137
@@ -66,6 +70,7 @@ brew "n"
 brew "wget"
 brew "aria2"
 brew "ipcalc"
+brew "mtr"
 cask "wireshark"
 cask "paw"
 
@@ -73,13 +78,11 @@ cask "paw"
 brew "v2ray", greedy: true
 cask "clashx", greedy: true
 
-# java
-brew "gradle"
-brew "maven"
 
 # media
 cask "iina"
-mas "Emby", id: 992180193
+cask "plex"
+cask "plexemp"
 mas "QQ音乐", id: 595615424
 
 # terminal
@@ -102,8 +105,10 @@ mas "微信", id: 836500024
 mas "QQ", id: 451108668
 
 # coding
+brew "glib"
+brew "neovim"
+brew "pyenv"
 cask "visual-studio-code"
-cask "intellij-idea"
 mas "SnippetsLab", id: 1006087419
 brew "semgrep"
 
@@ -111,8 +116,10 @@ brew "semgrep"
 cask "logitech-options"
 
 # note
+brew "pandoc"
 cask "logseq", greedy: true
 cask "zotero"
+cask "picgo"
 mas "GoodNotes", id: 1444383602
 mas "MWeb Pro", id: 1403919533
 
@@ -127,13 +134,41 @@ mas "Keynote 讲演", id: 409183694
 mas "Numbers 表格", id: 409203825
 mas "Pages 文稿", id: 409201541
 
+# java
+brew "openjdk"
+
 {{ if .personal }}
+## Personal
+
 # gaming
 cask "steam"
 
+# coding
+cask "goland"
+
 {{ else }}
+
+## Non Personal
 
 # chat
 mas "企业微信", id: 1189898970
+
+# pentester
+cask "burp-suite-professional"
+
+# coding
+cask "intellij-idea"
+
+# tool
+cask "alfred"
+cask "google-drive"
+
+# secret
+cask "1password"
+cask "1password-cli"
+
+# java
+brew "gradle"
+brew "maven"
 
 {{ end }}
