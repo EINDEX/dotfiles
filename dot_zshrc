@@ -123,6 +123,9 @@ bwunlock() {
     export BW_SESSION=$BW_SESSION_NEW
 }
 
+## GPG
+export GPG_TTY=$(tty)   
+
 ## ZSH theme
 ### Load starship theme via zinit
 zinit ice as"command" from"gh-r" atclone"./starship init zsh > init.zsh; ./starship completions zsh > _starship" atpull"%atclone" src"init.zsh"

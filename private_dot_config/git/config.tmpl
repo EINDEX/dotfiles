@@ -1,4 +1,4 @@
 [user]
 	name = {{ .username | quote }}
 	email = {{ .email | quote }}
-	{{ if .personal }}signingkey = {{ .gpg.id | quote }}{{ end }}
+	signingkey = {{ .gpg.id | quote }}

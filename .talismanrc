@@ -1,4 +1,4 @@
 fileignoreconfig:
-- filename: private_dot_ssh/private_config.tmpl
-  checksum: bad09bf6cd46425e1cbccb075629c96edfd6f76a91fec42c34023761ecf32fc0
+- filename: private_dot_config/git/config.tmpl
+  checksum: ef1dd161928951e965233ac4b5c3fa6cffcfe786974bc02f3920c919aa88aa7b
 version: ""

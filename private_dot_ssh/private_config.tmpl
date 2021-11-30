@@ -15,5 +15,5 @@ Host {{ $key }}
 Host *
   AddKeysToAgent yes
   UseKeychain yes
-  IdentityFile ~/.ssh/id_ed25519
+  {{ if .personal }}IdentityFile ~/.ssh/id_ed25519{{ end }}
 
