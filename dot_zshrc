@@ -20,26 +20,28 @@ zinit light-mode for \
 
 ## Zinit Snippets
 
+
 ### load Oh My ZSH plugins
 omz_plugins=(
     git
     tmux
-    thefuck
     gitignore
     cp
     colored-man-pages
-    dotenv
-    extract
 )
 for plugin in ${omz_plugins[@]}; do
     zinit snippet OMZ::plugins/$plugin/$plugin.plugin.zsh
 done
+zinit snippet OMZ::lib/key-bindings.zsh
+zinit snippet OMZ::lib/history.zsh
 
 ### load other zinit plugins
 zinit load zdharma-continuum/history-search-multi-word
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma-continuum/fast-syntax-highlighting
 
+# zinit pyenv
+zinit light mattberther/zsh-pyenv
 
 ## Language
 export LANG=zh_CN.UTF-8
@@ -105,6 +107,12 @@ fi
 if [ -d $HOME/.rvm ]; then
     export PATH="$PATH:$HOME/.rvm/bin"
 fi
+
+## direnv
+zplugin ice from"gh-r" as"program" mv"direnv* -> direnv" \
+    './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
+zplugin light direnv/direnv
+
 
 ## GCP
 if [ `uname` = "Darwin" ]; then
