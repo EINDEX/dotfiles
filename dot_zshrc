@@ -109,10 +109,9 @@ if [ -d $HOME/.rvm ]; then
 fi
 
 ## direnv
-zplugin ice from"gh-r" as"program" mv"direnv* -> direnv" \
-    './direnv hook zsh > zhook.zsh' atpull'%atclone' pick"direnv"
-zplugin light direnv/direnv
-
+zinit ice as"program" make'!' atclone'./direnv hook zsh > zhook.zsh' \
+    atpull'%atclone' pick"direnv" src"zhook.zsh"
+zinit light direnv/direnv
 
 ## GCP
 if [ `uname` = "Darwin" ]; then
