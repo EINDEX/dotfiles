@@ -1,4 +1,18 @@
 fileignoreconfig:
-- filename: private_dot_config/git/config.tmpl
-  checksum: 90bc1cd0534d0ace533f5dd53578fd6ea31a3bbd422bb73c890199983f27e91a
+- filename: dot_local/share/chezmoi/dot_envrc.tmpl
+  checksum: 83814101cd2d403b3b23b854beebf23ed15d43d468d1f08b3185db1f3b70b610
+- filename: private_dot_gnupg/private_private-keys-v1.d/private_6EB395216FF7AB0C337148C2404F9CC7BFF73E54.key.tmpl
+  checksum: 90f2ae53eedc1c97d561095b4a12ba041fc11bb6aa4dec0f69c9c2593a519547
+- filename: private_dot_gnupg/private_private-keys-v1.d/private_ECDF60D479E5C1B449B3262E362B5CA648681858.key.tmpl
+  checksum: 9e63f6b9e0f98a012c47e4b868a00c48c6296d670555c1470ac3e08e191207d3
+- filename: private_dot_ssh/private_authorized_keys
+  checksum: 14042c5183778fab49ac31c61fdd6658d5d99e8ab569a374f14634fe88781e5a
+- filename: projects/dot_envrc.tmpl
+  checksum: 1d76c0848d876d7d681aafa42c3da0f8b4e99f1aae2c54c9b6c1e562aab8149e
+- filename: private_dot_ssh/id_ed25519.pub
+  checksum: aaa5b7aa521e24dc897354eb9865fb26ddbd7313aca04059a96bc445e6483755
+- filename: private_dot_ssh/id_rsa.pub
+  checksum: 2a3bd1757a89b199c319091753f81c77f0b21b7d30b47c4732a5ac4b9fe050cc
+- filename: dot_Brewfile.tmpl
+  checksum: cca8be2af58702523a1738b923250303c9641ff859f49e0f89a7a2a2ce9d0e55
 version: ""

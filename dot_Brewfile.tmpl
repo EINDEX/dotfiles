@@ -16,8 +16,7 @@ brew "hugo"
 # secret
 brew "gnupg"
 cask "keybase"
-brew "bitwarden-cli"
-mas "Bitwarden", id: 1352778147
+mas "1Password 7", id: 1333542190
 
 # git & github
 brew "git"
@@ -28,7 +27,6 @@ brew "git-crypt"
 
 # tools
 brew "tmux"
-brew "thefuck"
 cask "maczip"
 brew "ncdu"
 brew "jq"
@@ -74,11 +72,15 @@ brew "mtr"
 cask "wireshark"
 cask "paw"
 brew "you-get"
+brew "telnet"
 
 # proxy
 brew "v2ray", greedy: true
 cask "clashx", greedy: true
 
+# docker
+brew "docker"
+brew "colima"
 
 # media
 brew "libav"
@@ -86,7 +88,6 @@ brew "ffmpeg"
 cask "iina"
 cask "plex"
 cask "plexamp"
-mas "QQ音乐", id: 595615424
 
 # terminal
 cask "iterm2"
@@ -130,22 +131,16 @@ mas "MWeb Pro", id: 1403919533
 # font
 cask "font-cascadia"
 
-# cloud
-cask "google-cloud-sdk"
-
 # work
 mas "Keynote 讲演", id: 409183694
 mas "Numbers 表格", id: 409203825
 mas "Pages 文稿", id: 409201541
 
-# java
-brew "openjdk"
+# gaming
+cask "steam"
 
 {{ if .personal }}
 ## Personal
-
-# gaming
-cask "steam"
 
 # coding
 cask "goland"
@@ -153,6 +148,8 @@ cask "goland"
 {{ else }}
 
 ## Non Personal
+
+tap "aquasecurity/trivy"
 
 # chat
 mas "企业微信", id: 1189898970
@@ -168,11 +165,21 @@ cask "alfred"
 cask "google-drive"
 
 # secret
-cask "1password"
 cask "1password-cli"
+
+# cloud
+cask "google-cloud-sdk"
+
 
 # java
 brew "gradle"
 brew "maven"
+
+# tool
+mas "Microsoft Excel", id: 462058435
+mas "Microsoft Outlook", id: 985367838
+mas "Microsoft PowerPoint", id: 462062816
+mas "Microsoft Remote Desktop", id: 1295203466
+mas "Microsoft Word", id: 462054704
 
 {{ end }}
